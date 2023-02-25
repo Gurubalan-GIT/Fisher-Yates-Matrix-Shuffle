@@ -1,0 +1,37 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.container {
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  .rowContainer {
+    display: flex;
+    border-bottom: 1px solid black;
+    height: 100px;
+    width: 100%;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .cellContainer {
+      width: 100px;
+      border-left: 1px solid black;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .colNumber {
+        position: absolute;
+        right: 1px;
+        bottom: 1px;
+      }
+    }
+  }
+}
